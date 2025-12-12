@@ -182,7 +182,9 @@ class TestVideoDecode(unittest.TestCase):
             all_timestamps.append(0.5 * (timestamps[0][0] + timestamps[0][1]))
 
         for frame, timestamp1, timestamp2 in zip(
-            [*range(5), *range(245, 255), *range(1881, 1891)], all_timestamps, all_timestamps[1:] + [float("inf")]
+            [*range(5), *range(245, 255), *range(1881, 1891)],
+            all_timestamps,
+            all_timestamps[1:] + [float("inf")],
         ):
             if frame in (4, 254):
                 continue
